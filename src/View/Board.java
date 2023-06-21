@@ -64,19 +64,17 @@ public class Board {
     public void makeMove(int row, int col, char symbol) { //ход игрока или бота
         board[row][col] = symbol; // Заменяем пустую клетку на символ игрока
     }
-    /* Метод для полученя игрового поля*/
-    public char[][] getBoard() {
-        return board; //возвращает игровое поле
-    }
+
     /* Метод для проверки пустая ли клетка */
-//    public static boolean isInputError(int row, int col){
-//        if (row < 0 || col < 0 || row >= MAP_SIZE || col >= MAP_SIZE){
-//            return false;
-//        }
-//        if (board[row][col] != EMPTY_FIELD) {
-//            return false;
-//        }
-//        return true;
-//    }
+    public static boolean isInputError(int row, int col){
+        if (row < 0 || col < 0 || row >= MAP_SIZE || col >= MAP_SIZE){
+            System.out.println("Вы ввели не коректные данные попробуйте еще раз ");
+            return false;
+        }
+        if (board[row][col] != EMPTY_FIELD) { // По указанным координам лежит не пустая клетка
+            return false;
+        }
+        return true;
+    }
 }
 
