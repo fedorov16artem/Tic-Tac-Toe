@@ -6,20 +6,22 @@ public class Player {
     private Scanner scanner;
 
     public Player(char symbol) {
-        this.symbol = symbol;
-        scanner = new Scanner(System.in);
+        this.symbol = symbol; //записываем символ игрока в поле symbol
+        scanner = new Scanner(System.in); //создаем экземпляр сканера, который считывает ввод пользователя из консоли
     }
 
+    /* */
     public int[] getNextMove() {
-        System.out.print("Введите строку и столбец через пробел (например, 1 2): ");
-        int row = scanner.nextInt() - 1;
-        int col = scanner.nextInt() - 1;
-        int[] nextMove = {row, col};
-        return nextMove;
+        System.out.print("Введите строку и столбец через пробел (например, 1 2): "); //выводим сообщение для пользователя
+        int row = scanner.nextInt() - 1; //считываем индекс строки из ввода пользователя
+        int col = scanner.nextInt() - 1;//считываем индекс стобца из ввода пользователя
+        int[] nextMove = {row, col}; //создаем массив с координатами игрока
+        return nextMove; //возвращаем массив
     }
 
-    public char getSymbol() { //возвращает символ игрока
-        return symbol;
+    /* Метод получения символа  */
+    public char getSymbol() {
+        return symbol;//возвращает символ игрока
     }
 }
 
