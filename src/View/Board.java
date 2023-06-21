@@ -1,8 +1,10 @@
 package View;
+
+
 public class Board {
     private static final  int MAP_SIZE = 3;  // размер игрового поля (Константа)
     private static final  char EMPTY_FIELD = '*'; // Чем азполняем игровое поле (Константа)
-    private char[][] board;//создаем двумерный массив символов, представляющий игровое поле
+    private static char[][] board;//создаем двумерный массив символов, представляющий игровое поле
     /* Конструктор класса, СОздаем массив и заполняет его "*" */
     public Board() {
         board = new char[MAP_SIZE][MAP_SIZE];
@@ -66,5 +68,15 @@ public class Board {
     public char[][] getBoard() {
         return board; //возвращает игровое поле
     }
+    /* Метод для проверки пустая ли клетка */
+//    public static boolean isInputError(int row, int col){
+//        if (row < 0 || col < 0 || row >= MAP_SIZE || col >= MAP_SIZE){
+//            return false;
+//        }
+//        if (board[row][col] != EMPTY_FIELD) {
+//            return false;
+//        }
+//        return true;
+//    }
 }
 

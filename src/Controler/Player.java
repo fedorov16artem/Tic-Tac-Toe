@@ -23,6 +23,7 @@ public class Player {
     public char getSymbol() {
         return symbol;//возвращает символ игрока
     }
+
 }
 
 
